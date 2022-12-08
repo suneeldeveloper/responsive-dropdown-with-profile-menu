@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar-with-dropdown-menu</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://kit.fontawesome.com/49f9368e24.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <i class="fa-solid fa-bars" onclick="bars()"></i>
+            
+            <a href="index.html" class="logo"><span>CodeMaster</span></a>
+        </div>
+        <div class="nav-right">
+
+            <ul id="dropdownMenu">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+            <div class="online">
+                <img src="./user-5.png" class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+            <span>Suneel kumar</span>
+        </div>
+        <!-- ----------------profile-dropdown-menu -->
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="./user-5.png" alt="">
+                    <div>
+                        <h3>Suneel Kumar</h3>
+                        <a href="#">See your profile</a>
+                    </div>
+
+                </div>
+                <hr>
+                <a href="#" class="menu-links">Help & Support</a>
+                <a href="#" class="menu-links">Help & Support</a>
+                <a href="#" class="menu-links">Help & Support</a>
+                <a href="#" class="menu-links">Help & Support</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+        let profileMenu = document.getElementById('profileMenu')
+
+        function toggleMenu(){
+            profileMenu.classList.toggle('open-menu')
+        }
+
+        let dropdownMenu = document.getElementById('dropdownMenu')
+
+        function bars(){
+            dropdownMenu.classList.toggle('open-bars')
+        }
+    </script>
+</body>
+
+</html>
